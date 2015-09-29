@@ -1,14 +1,14 @@
 {
   "name": "git-add",
   "main": "./lib/git-add",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A short description of your package",
   "keywords": [
   ],
   "activationCommands": {
     "atom-workspace": "git-add:toggle"
   },
-  "repository": "https://github.com/atom/git-add",
+  "repository": "https://github.com/wismer/git-add",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
