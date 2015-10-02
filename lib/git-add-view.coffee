@@ -1,10 +1,13 @@
+
 module.exports =
 class GitAddView
   constructor: (serializedState) ->
+    # @highlightEvent = atom.config.observe 'editor.selectedText', (newVal, previous) ->
+    #   @changeHighlightedText(newVal)
     # Create root element
     @element = document.createElement('div')
+    @highlightedText = ''
     @element.classList.add('git-add')
-
     # Create message element
     message = document.createElement('div')
     message.textContent = "The GitAdd package is Alive! It's ALIVE!"
@@ -20,3 +23,6 @@ class GitAddView
 
   getElement: ->
     @element
+
+  callback: (text) ->
+    console.log text.getSelectedText()

@@ -9,7 +9,7 @@ module.exports = GitAdd =
   activate: (state) ->
     @gitAddView = new GitAddView(state.gitAddViewState)
     @modalPanel = atom.workspace.addModalPanel(item: @gitAddView.getElement(), visible: false)
-
+    atom.workspace.observeTextEditors(@gitAddView.callback)
     # Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
     @subscriptions = new CompositeDisposable
 
