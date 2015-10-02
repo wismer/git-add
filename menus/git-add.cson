@@ -4,6 +4,10 @@
     {
       'label': 'Toggle git-add'
       'command': 'git-add:toggle'
+    },
+    {
+      'label': 'Show Text',
+      'command': 'git-add:highlight'
     }
   ]
 'menu': [

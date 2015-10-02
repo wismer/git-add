@@ -14,7 +14,9 @@ module.exports = GitAdd =
     @subscriptions = new CompositeDisposable
 
     # Register command that toggles this view
-    @subscriptions.add atom.commands.add 'atom-workspace', 'git-add:toggle': => @toggle()
+    @subscriptions.add atom.commands.add 'atom-text-editor', 'git-add:toggle': => @toggle()
+    @subscriptions.add atom.commands.add 'atom-text-editor', 'git-add:highlight': ->
+      console.log 'wtf'
 
   deactivate: ->
     @modalPanel.destroy()
@@ -23,6 +25,9 @@ module.exports = GitAdd =
 
   serialize: ->
     gitAddViewState: @gitAddView.serialize()
+
+  highlight: ->
+    console.log 'blahblah'
 
   toggle: ->
     console.log 'GitAdd was toggled!'

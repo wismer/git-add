@@ -8,5 +8,5 @@
 # For more detailed documentation see
 # https://atom.io/docs/latest/behind-atom-keymaps-in-depth
 'atom-workspace':
-  'ctrl-alt-o': 'git-add:toggle'
-  'ctrl-alt-g': 'git-add:sayHello'
+  'ctrl-alt-k': 'git-add:toggle'
+  'cmd-shift-k': 'git-add:higlight'
